@@ -184,9 +184,12 @@ qcheck()
         QUEUE="single"
     fi
     if [[ -z "$NPROC" ]]; then
-        if [[ $QUEUE == "xppn" || $QUEUE == "xp24mc4" || $QUEUE == "xp24mc2" ]]; then
-            echo "Try to use the default nproc for xppn -- 24"
-            NPROC=24
+        #if [[ $QUEUE == "xppn" || $QUEUE == "xp24mc4" || $QUEUE == "xp24mc2" ]]; then
+        #    echo "Try to use the default nproc for xppn -- 24"
+        #    NPROC=24
+        if [[ $QUEUE == "Gaussian" ]]; then
+            echo "Try to use the default nproc for Gaussian -- 28"
+            NPROC=28
         elif [[ $QUEUE == "xxchem" || $QUEUE == "xp40mc12" ]]; then
             echo "Try to use the default nproc for xxchem -- 40"
             NPROC=40
