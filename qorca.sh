@@ -58,6 +58,7 @@ qsub_usage()
     echo "  -v 503    5.0.3 version with openmpi-4.1.1"
     echo "  -v 504    5.0.4 version with openmpi-4.1.1"
     echo "  -v 600    6.0.0 version with openmpi-4.1.6"
+    echo "  -v 601    6.0.0 version with openmpi-4.1.6"
     echo ""
     echo "Queue and default number of processes:"
     echo "  -q single   (1 proc)"
@@ -174,6 +175,10 @@ qsub_parse_args()
         ORCA_EXEC=/share/apps/ORCA/orca_6_0_0_linux_x86-64_avx2_shared_openmpi416/orca
         OPENMPI_PATH=/share/apps/ORCA/openmpi-4.1.6
         ORCA_PATH=/share/apps/ORCA/orca_6_0_0_linux_x86-64_avx2_shared_openmpi416
+    elif [[ "$ORCA_VER" == "601" ]]; then
+        ORCA_EXEC=/share/apps/ORCA/orca_6_0_1_linux_x86-64_shared_openmpi416_avx2/orca
+        OPENMPI_PATH=/share/apps/ORCA/openmpi-4.1.6
+        ORCA_PATH=/share/apps/ORCA/orca_6_0_1_linux_x86-64_shared_openmpi416_avx2
     else
         echo "No such version"
         qsub_usage
