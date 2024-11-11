@@ -289,6 +289,11 @@ qsubmit()
 #       echo 'SCR_DIR=$(mktemp -d /tmp/$USER/orca/"$ORCA_FILE"__XXXXXX)'
 #   fi
     echo 'echo \"From BSUB script: Scratch file directory: $SCR_DIR\" > $ORCA_WRKDIR/$ORCA_FILE_PREFIX.oout 2>&1'
+    echo 'echo \"From BSUB script: Scratch file directory: $SCR_DIR\" '
+    echo 'if [[ -z $SCR_DIR ]]; then'
+    echo '  echo invalid SCR_DIR'
+    echo '  exit'
+    echo 'fi'
     echo 'cp $ORCA_FILE $SCR_DIR'
     echo 'cp $ORCA_FILE_PREFIX.gbw $SCR_DIR'
     echo 'cp $ORCA_FILE_PREFIX.pot $SCR_DIR'
