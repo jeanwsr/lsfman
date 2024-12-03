@@ -58,7 +58,7 @@ qsub_usage()
     echo "  -v 503    5.0.3 version with openmpi-4.1.1"
     echo "  -v 504    5.0.4 version with openmpi-4.1.1"
     echo "  -v 600    6.0.0 version with openmpi-4.1.6"
-    echo "  -v 601    6.0.0 version with openmpi-4.1.6"
+    echo "  -v 601    6.0.1 version with openmpi-4.1.6"
     echo ""
     echo "Queue and default number of processes:"
     echo "  -q single   (1 proc)"
